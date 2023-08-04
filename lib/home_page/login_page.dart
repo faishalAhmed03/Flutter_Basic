@@ -34,7 +34,7 @@ class _LoginPageState extends State<LoginPage> {
             key: _formKey,
             child: Column(children: [
               const SizedBox(
-                height: 50,
+                height: 250,
               ),
               Image.asset(
                 "assets/images/logo.png",
@@ -62,6 +62,7 @@ class _LoginPageState extends State<LoginPage> {
                   children: [
                     TextFormField(
                       decoration: const InputDecoration(
+                        icon: Icon(Icons.person),
                         hintText: "Enter Username",
                         labelText: "UserName",
                       ),
@@ -79,6 +80,7 @@ class _LoginPageState extends State<LoginPage> {
                     TextFormField(
                       obscureText: true,
                       decoration: const InputDecoration(
+                        icon: Icon(Icons.password),
                         hintText: "Enter Password",
                         labelText: "Password",
                       ),
@@ -97,7 +99,7 @@ class _LoginPageState extends State<LoginPage> {
                     InkWell(
                       onTap: () => moveToHome(context),
                       child: AnimatedContainer(
-                        duration: Duration(seconds: 1),
+                        duration: const Duration(seconds: 1),
                         height: 50,
                         width: changeButton ? 50 : 120,
                         alignment: Alignment.center,
